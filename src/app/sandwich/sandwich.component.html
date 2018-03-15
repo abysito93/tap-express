@@ -1,0 +1,20 @@
+<div class="row align-items-center">
+  <div class="col">
+    <form [formGroup]="sandwichForm">
+        <div class="form-group">
+          <label class="center-block"><b>Sandwich</b>
+            <select class="form-control" formControlName="name">
+                <option value="">--Selecciona un sandwich--</option>
+                <option *ngFor="let sandwich of sandwiches" [ngValue]="sandwich">{{sandwich.name}}</option>
+              </select>
+          </label>
+          <br/>
+        </div>
+      </form>
+  </div>
+  <div class="col">
+      <p>Form value: {{sandwichForm.value | json }}</p>
+      <p>Form status: {{sandwichForm.status | json }}</p>
+      <!-- <app-order></app-order> -->
+  </div>
+</div>

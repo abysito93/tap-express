@@ -1,0 +1,43 @@
+<div class="row align-items-center">
+  <div class="col">
+    <form [formGroup]="lunchForm">
+        <div class="form-group">
+          <!-- <label class="center-block"><b>Main Course:</b>
+            <input class="form-control" formControlName="course">
+          </label>
+          <label class="center-block"><b>Complemento 1:</b>
+            <input class="form-control" formControlName="complement1">
+          </label>
+          <label class="center-block"><b>Complemento 2:</b>
+            <input class="form-control" formControlName="complement2">
+          </label> -->
+          <label class="center-block"><b>Plato Principal:</b>
+            <select class="form-control" formControlName="course">
+                <option value="">--Selecciona un plato--</option>
+                <option *ngFor="let course of courses" [ngValue]="course">{{course.name}}</option>
+              </select>
+          </label>
+          <br/>
+          <label class="center-block"><b>1er Complemento:</b>
+            <select class="form-control" formControlName="complement1">
+                <option value="">--Selecciona un complemento--</option>
+                <option *ngFor="let complement of complements" [ngValue]="complement">{{complement.name}}</option>
+              </select>
+          </label>
+          <br/>
+          <label class="center-block"><b>2do Complemento:</b>
+            <select class="form-control" formControlName="complement2">
+                <option value="">--Selecciona un complemento--</option>
+                <option *ngFor="let complement of complements" [ngValue]="complement">{{complement.name}}</option>
+              </select>
+          </label>
+          <br/>
+        </div>
+      </form>
+  </div>
+  <div class="col">
+      <p>Form value: {{lunchForm.value | json }}</p>
+      <p>Form status: {{lunchForm.status | json }}</p>
+      <!-- <app-order></app-order> -->
+  </div>
+</div>

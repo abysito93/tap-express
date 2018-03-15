@@ -1,0 +1,131 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">tapEXPRESS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/menu">Menú</a>
+      </li>
+    </ul>
+    <button class="btn btn-outline-primary my-2 my-sm-0" data-toggle="modal" data-target="#log-in-modal">Log In</button>
+
+    <button class="btn btn-outline-primary my-2 my-sm-0" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body ">
+              <div class="container-fluid">
+                  <form [formGroup]="signForm">
+                      <div class="form-group">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label class="col-form-label">
+                                    Username:
+                                  </label>
+                                </div>
+                              <div class="col-md-6">
+                                <input type="text" class="form-control" id="sign-username" formControlName="username">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <div class="col-md-6">
+                                <label id="password" class="col-form-label">
+                                  Password:
+                                </label>
+                              </div>
+                              <div class="col-md-6">
+                                <input type="password" class="form-control" id="sign-password" formControlName="password">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <div class="col-md-6">
+                                <label id="confirm-password" class="col-form-label">
+                                  Confirm Password:
+                                </label>
+                              </div>
+                              <div class="col-md-6">
+                                <input type="password" class="form-control" id="confirm-password" formControlName="confirmPassword">
+                              </div>
+                          </div>
+                      </div>
+                      <p> Form Value: {{signForm.value | json}}</p>
+                      <p>Form Status: {{ signForm.status | json }}</p>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary">Sign Up</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="log-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Log In</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form [formGroup]="logForm">
+                  <div class="form-group">
+                      <div class="row">
+                          <div class="col-md-6">
+                            <label class="col-form-label">
+                              Username:
+                            </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control" id="log-username" formControlName="username">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="row">
+                          <div class="col-md-6">
+                            <label id="password" class="col-form-label">
+                              Password:
+                            </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="password" class="form-control" id="log-password" formControlName="password">
+                          </div>
+                      </div>
+                  </div>
+                  <p>Form Value: {{ logForm.value | json }}</p>
+                  <p>Form Status: {{ logForm.status | json }}</p>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Log In</button>
+          </div>
+      </div>
+  </div>
+</div>
