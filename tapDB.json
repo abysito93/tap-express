@@ -1,0 +1,40 @@
+{
+    "mainCourse": {
+        "asoapao-de-gandules": {
+            "name": "Asopao de Gandules",
+            "price": 3.95
+        },
+        "pollo-rostizado": {
+            "name": "Pollo Rostizado",
+            "price": 4.50
+        },
+        "filete-de-cerdo-encebollado": {
+            "name": "Filete de Cerdo Encebollado",
+            "price": 4.95
+        },
+        "pechuga-de-pollo-a-la-plancha": {
+            "name": "Pechuga de Pollo a la Plancha",
+            "price": 5.50
+        },
+        "serenata-de-bacalao": {
+            "name": "Serenata de Bacalao",
+            "price": 5.75
+        },
+        "ensalada-de-mariscos": {
+            "name": "Ensalada de Mariscos",
+            "price": 5.95
+        },
+        "chicharrones-de-pescado": {
+            "name": "Chicharrones de Pescado", 
+            "price": 5.95
+        },
+        "bistec-al-pimiento": {
+            "name": "Bistec al Pimiento",
+            "price": 6.25
+        },
+        "churrasco-al-caldero": {
+            "name": "Churrasco al Caldero",
+            "price": 8.25
+        }
+    }
+}

@@ -8,6 +8,7 @@ import { LunchComponent } from './lunch/lunch.component';
 import { BreakfastComponent } from './breakfast/breakfast.component';
 import { PastaComponent } from './pasta/pasta.component';
 import { SandwichComponent } from './sandwich/sandwich.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'lunch', component: LunchComponent },
   { path: 'breakfast', component: BreakfastComponent },
   { path: 'pasta', component: PastaComponent },
-  { path: 'sandwich', component: SandwichComponent }
+  { path: 'sandwich', component: SandwichComponent },
+  { path: 'profile', component: ProfileComponent }
 ]
 
 @NgModule({

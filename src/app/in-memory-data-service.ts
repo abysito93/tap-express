@@ -15,6 +15,16 @@ export class InMemoryDataService implements InMemoryDbService {
             { id: 10, name: "Churrasco al Caldero", price: 8.25, veg: false }
         ];
 
+        const mainCourses2 = [
+            { id: 1, name: "Sopa de Res y Fideo", price: 0.00, veg: false },
+            { id: 2, name: "Pollo Rostizado", price: 0.00, veg: false },
+            { id: 3, name: "Papas Salteadas", price: 0.00, veg: true },
+            { id: 4, name: "Carne de Res con Brocoli", price: 0.00, veg: false },
+            { id: 5, name: "Pechuga de Pollo a la Plancha", price: 0.00, veg: false },
+            { id: 6, name: "Pavo al Horno", price: 0.00, veg: false },
+            { id: 7, name: "Churrasco al Caldero", price: 0.00, veg: false }
+        ]
+
         const complements = [
             { id: 1, name: "Arroz Blanco" },
             { id: 2, name: "Arroz Blanco con Habichuelas" },

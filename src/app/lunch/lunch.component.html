@@ -36,8 +36,16 @@
       </form>
   </div>
   <div class="col">
+    <ul>
+      <div *ngFor="let course of mainCourseObservable | async">
+          <h3><a href="#">{{course.name}}</a></h3>
+          <p>{{course.price}}</p>
+          <div>
+            <a href="{{course.url}}" target="_blank" class="btn btn-danger">Order</a>
+          </div>
+      </div>
+    </ul>
       <p>Form value: {{lunchForm.value | json }}</p>
       <p>Form status: {{lunchForm.status | json }}</p>
-      <!-- <app-order></app-order> -->
   </div>
 </div>

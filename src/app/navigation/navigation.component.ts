@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class NavigationComponent implements OnInit {
   logForm: FormGroup;
   signForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) {
     this.createLogForm();
     this.createSignForm();
    }
@@ -33,6 +34,10 @@ export class NavigationComponent implements OnInit {
       password: ['', Validators.required ],
       confirmPassword: ['', Validators.required ]
     })
+  }
+
+  loginGoogle() {
+    this.authService.googleLogin();
   }
 
 }

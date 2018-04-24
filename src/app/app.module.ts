@@ -7,6 +7,12 @@ import { InMemoryDataService } from './in-memory-data-service';
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthService } from './auth.service';
+import { environment } from './../environments/environment';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +29,7 @@ import { MainCourseService } from './main-course.service';
 import { ComplementService } from './complement.service';
 import { OrderService } from './order.service';
 import { SandwichService } from './sandwich.service';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -36,7 +43,8 @@ import { SandwichService } from './sandwich.service';
     PastaComponent,
     SandwichComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +56,13 @@ import { SandwichService } from './sandwich.service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    NgbModule.forRoot()
   ],
-  providers: [MainCourseService, ComplementService, OrderService, SandwichService],
+  providers: [MainCourseService, ComplementService, OrderService, SandwichService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

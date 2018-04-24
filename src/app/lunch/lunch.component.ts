@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 import { MainCourse } from '../main-course';
 import { Complement } from '../complement';
@@ -18,22 +20,24 @@ export class LunchComponent implements OnInit {
 
   lunchForm: FormGroup;
 
-  constructor(private mainCourseService: MainCourseService, private complementService: ComplementService, private formBuilder: FormBuilder) {
+  constructor(private mainCourseService: MainCourseService, private complementService: ComplementService, private formBuilder: FormBuilder, private db: AngularFireDatabase) {
     this.createForm();
   }
+
+  mainCourseObservable: Observable<any[]>;
 
   courses: MainCourse[];
   complements: Complement[];
   plate: Plate[];
 
   ngOnInit() {
-    this.getCourses();
+    // this.getCourses();
     this.getComplements();
+    this.mainCourseObservable = this.getCourses('/mainCourse');
   }
 
-  getCourses(): void {
-    this.mainCourseService.getMainCourse()
-    .subscribe(courses => this.courses = courses);
+  getCourses(listPath): Observable<any[]> {
+    return this.db.list(listPath).valueChanges();
   }
 
   getComplements(): void {
