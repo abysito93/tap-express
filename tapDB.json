@@ -1,40 +1,100 @@
 {
-    "mainCourse": {
-        "asoapao-de-gandules": {
-            "name": "Asopao de Gandules",
-            "price": 3.95
+    "Item": {
+        "churrasco": {
+            "name": "Churrasco",
+            "description": "",
+            "type": "entree",
+            "price": 11.99
         },
-        "pollo-rostizado": {
-            "name": "Pollo Rostizado",
-            "price": 4.50
+        "pechuga": {
+            "name": "Pechuga",
+            "description": "",
+            "type": "entree",
+            "price": 10.99
         },
-        "filete-de-cerdo-encebollado": {
-            "name": "Filete de Cerdo Encebollado",
-            "price": 4.95
+        "fajitas_de_pollo": {
+            "name": "Fajitas de Pollo",
+            "desscription": "",
+            "type": "entree",
+            "price": 11.99
         },
-        "pechuga-de-pollo-a-la-plancha": {
-            "name": "Pechuga de Pollo a la Plancha",
-            "price": 5.50
+        "penne_pollo": {
+            "name": "Pasta Penne con Pollo",
+            "description": "",
+            "type": "entree",
+            "price": 10.99
         },
-        "serenata-de-bacalao": {
-            "name": "Serenata de Bacalao",
-            "price": 5.75
+        "lasagna_carne": {
+            "name": "Lasagna de Carne",
+            "description": "",
+            "type": "entree",
+            "price": 12.99
         },
-        "ensalada-de-mariscos": {
-            "name": "Ensalada de Mariscos",
-            "price": 5.95
+        "flan_queso": {
+            "name": "Flan de Queso",
+            "description": "",
+            "type": "dessert",
+            "price": 2.00
         },
-        "chicharrones-de-pescado": {
-            "name": "Chicharrones de Pescado", 
-            "price": 5.95
+        "flan_coco": {
+            "name": "Flan de Coco",
+            "description": "",
+            "type": "dessert",
+            "price": 2.00
         },
-        "bistec-al-pimiento": {
-            "name": "Bistec al Pimiento",
-            "price": 6.25
+        "sandwich_pollo": {
+            "name": "Sandwich de Pollo",
+            "description": "",
+            "type": "sandwich",
+            "price": 4.99
         },
-        "churrasco-al-caldero": {
-            "name": "Churrasco al Caldero",
-            "price": 8.25
+        "hamburger": {
+            "name": "Hamburger",
+            "description": "",
+            "type": "sandwich",
+            "price": 4.99
+        },
+        "hot_dog": {
+            "name": "Hot Dog",
+            "description": "",
+            "type": "sandwich",
+            "price": 4.99
+        },
+        "papas_fritas": {
+            "name": "Papas Fritas",
+            "description": "",
+            "type": "appetizer",
+            "price": 2.50
+        },
+        "cordon_bleu": {
+            "name": "Mini Cordon Bleu",
+            "description": "",
+            "type": "appetizer",
+            "price": 3.99
+        },
+        "sorullos": {
+            "name": "Sorullos de Maiz",
+            "description": "",
+            "type": "appetizer",
+            "price": 3.99
+        },
+        "mozarella": {
+            "name": "Mozarella Sticks",
+            "description": "",
+            "type": "appetizer",
+            "price": 3.99
+        },
+        "surtido_simple": {
+            "name": "Surtido",
+            "description": "",
+            "type": "sampler",
+            "price": 10.50
+        },
+        "surtido_grande": {
+            "name": "Surtido",
+            "description": "",
+            "type": "sampler",
+            "price": 19.99
         }
     }
 }
