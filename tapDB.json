@@ -1,100 +1,94 @@
 {
     "Item": {
-        "churrasco": {
-            "name": "Churrasco",
-            "description": "",
-            "type": "entree",
-            "price": 11.99
-        },
-        "pechuga": {
-            "name": "Pechuga",
-            "description": "",
-            "type": "entree",
-            "price": 10.99
-        },
-        "fajitas_de_pollo": {
-            "name": "Fajitas de Pollo",
-            "desscription": "",
-            "type": "entree",
-            "price": 11.99
-        },
-        "penne_pollo": {
-            "name": "Pasta Penne con Pollo",
-            "description": "",
-            "type": "entree",
-            "price": 10.99
-        },
-        "lasagna_carne": {
-            "name": "Lasagna de Carne",
-            "description": "",
-            "type": "entree",
-            "price": 12.99
-        },
-        "flan_queso": {
-            "name": "Flan de Queso",
-            "description": "",
-            "type": "dessert",
-            "price": 2.00
-        },
-        "flan_coco": {
-            "name": "Flan de Coco",
-            "description": "",
-            "type": "dessert",
-            "price": 2.00
-        },
-        "sandwich_pollo": {
-            "name": "Sandwich de Pollo",
-            "description": "",
-            "type": "sandwich",
-            "price": 4.99
-        },
-        "hamburger": {
-            "name": "Hamburger",
-            "description": "",
-            "type": "sandwich",
-            "price": 4.99
-        },
-        "hot_dog": {
-            "name": "Hot Dog",
-            "description": "",
-            "type": "sandwich",
-            "price": 4.99
-        },
-        "papas_fritas": {
-            "name": "Papas Fritas",
-            "description": "",
-            "type": "appetizer",
-            "price": 2.50
-        },
-        "cordon_bleu": {
-            "name": "Mini Cordon Bleu",
-            "description": "",
-            "type": "appetizer",
-            "price": 3.99
-        },
-        "sorullos": {
-            "name": "Sorullos de Maiz",
-            "description": "",
-            "type": "appetizer",
-            "price": 3.99
-        },
-        "mozarella": {
-            "name": "Mozarella Sticks",
-            "description": "",
-            "type": "appetizer",
-            "price": 3.99
-        },
-        "surtido_simple": {
-            "name": "Surtido",
-            "description": "",
-            "type": "sampler",
-            "price": 10.50
-        },
-        "surtido_grande": {
-            "name": "Surtido",
-            "description": "",
-            "type": "sampler",
-            "price": 19.99
-        }
+        "Entree": [
+            {
+                "name": "Churrasco",
+                "description": "",
+                "price": 11.99
+            },
+            {
+                "name": "Pechuga",
+                "description": "",
+                "price": 10.99
+            },
+            {
+                "name": "Fajitas de Pollo",
+                "desscription": "",
+                "price": 11.99
+            },
+            {
+                "name": "Pasta Penne con Pollo",
+                "description": "",
+                "price": 10.99
+            },
+            {
+                "name": "Lasagna de Carne",
+                "description": "",
+                "price": 12.99
+            }
+        ],
+        "Dessert": [
+            {
+                "name": "Flan de Queso",
+                "description": "",
+                "price": 2.00
+            },
+            {
+                "name": "Flan de Coco",
+                "description": "",
+                "price": 2.00
+            }
+        ],
+        "Sandwich": [
+            {
+                "name": "Sandwich de Pollo",
+                "description": "",
+                "price": 4.99
+            },
+            {
+                "name": "Hamburger",
+                "description": "",
+                "price": 4.99
+            },
+            {
+                "name": "Hot Dog",
+                "description": "",
+                "price": 4.99
+            }
+        ],
+        "Appetizer": [
+            {
+                "name": "Papas Fritas",
+                "description": "",
+                "price": 2.50
+            },
+            {
+                "name": "Mini Cordon Bleu",
+                "description": "",
+                "price": 3.99
+            },
+            {
+                "name": "Sorullos de Maiz",
+                "description": "",
+                "price": 3.99
+            },
+            {
+                "name": "Mozarella Sticks",
+                "description": "",
+                "price": 3.99
+            }
+        ],
+        "Sampler": [
+            {
+                "name": "Surtido",
+                "description": "",
+                "price": 10.50
+            },
+            {
+                "name": "Surtido",
+                "description": "",
+                "price": 19.99
+            }
+        ]
     }
 }

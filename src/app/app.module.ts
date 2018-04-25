@@ -2,34 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data-service';
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 import { environment } from './../environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { HomeComponent } from './home/home.component';
-import { OrderComponent } from './order/order.component';
-import { LunchComponent } from './lunch/lunch.component';
-import { BreakfastComponent } from './breakfast/breakfast.component';
-import { PastaComponent } from './pasta/pasta.component';
-import { SandwichComponent } from './sandwich/sandwich.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { FooterComponent } from './footer/footer.component';
-import { MainCourseService } from './main-course.service';
-import { ComplementService } from './complement.service';
-import { OrderService } from './order.service';
-import { SandwichService } from './sandwich.service';
-import { ProfileComponent } from './profile/profile.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { OrderComponent } from './components/order/order.component';
+import { LunchComponent } from './components/lunch/lunch.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { OrderService } from './services/order.service';
+
+
 
 
 @NgModule({
@@ -39,9 +33,6 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     OrderComponent,
     LunchComponent,
-    BreakfastComponent,
-    PastaComponent,
-    SandwichComponent,
     NavigationComponent,
     FooterComponent,
     ProfileComponent
@@ -54,15 +45,12 @@ import { ProfileComponent } from './profile/profile.component';
     HttpModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     NgbModule.forRoot()
   ],
-  providers: [MainCourseService, ComplementService, OrderService, SandwichService, AuthService],
+  providers: [OrderService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

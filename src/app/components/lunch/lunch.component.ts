@@ -3,13 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import { Item } from '../../models/item.model';
 
-import { MainCourse } from '../main-course';
-import { Complement } from '../complement';
-import { Plate } from '../plate';
-
-import { MainCourseService } from '../main-course.service';
-import { ComplementService } from '../complement.service';
 
 @Component({
   selector: 'app-lunch',
@@ -20,29 +15,29 @@ export class LunchComponent implements OnInit {
 
   lunchForm: FormGroup;
 
-  constructor(private mainCourseService: MainCourseService, private complementService: ComplementService, private formBuilder: FormBuilder, private db: AngularFireDatabase) {
+  constructor(private formBuilder: FormBuilder, private db: AngularFireDatabase) {
     this.createForm();
   }
 
-  mainCourseObservable: Observable<any[]>;
+  entreeObservable: Observable<any[]>;
+  complementObservable: Observable<any[]>;
 
-  courses: MainCourse[];
-  complements: Complement[];
-  plate: Plate[];
+  entree: Item[];
+  complements: Item[];
 
   ngOnInit() {
     // this.getCourses();
-    this.getComplements();
-    this.mainCourseObservable = this.getCourses('/mainCourse');
+    // this.getComplements();
+    this.entreeObservable = this.getCourses('/Item/Entree');
+    this.complementObservable = this.getAppetizer('/Item/Appetizer');
   }
 
   getCourses(listPath): Observable<any[]> {
     return this.db.list(listPath).valueChanges();
   }
 
-  getComplements(): void {
-    this.complementService.getComplements()
-    .subscribe(complements => this.complements = complements);
+  getAppetizer(listPath): Observable<any[]> {
+    return this.db.list(listPath).valueChanges();
   }
 
   createForm(): void {
